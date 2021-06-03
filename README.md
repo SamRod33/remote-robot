@@ -1,7 +1,7 @@
 <!-----
 NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.406 seconds.
+Conversion time: 0.366 seconds.
 
 
 Using this Markdown file:
@@ -14,22 +14,13 @@ Using this Markdown file:
 Conversion notes:
 
 * Docs to Markdown version 1.0β29
-* Thu Jun 03 2021 10:50:35 GMT-0700 (PDT)
+* Thu Jun 03 2021 10:52:30 GMT-0700 (PDT)
 * Source doc: UGV Robot
 
 WARNING:
 You have 6 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
 
 ----->
-
-
-<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 0.</p>
-<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
-
-<p style="color: red; font-weight: bold">Links to alert messages:</p>
-<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
-
-
 
 # Unmanned Ground Vehicle (UGV)
 
@@ -52,7 +43,7 @@ Personally, I am at my university for most of the year, so I do not have the abi
 
 ## Problem
 
-	Humans are limited in how fast they can travel. It is not instant, nor do we have the financial means to travel all the time. We are also limited such that we cannot be in multiple places at the same time either.
+Humans are limited in how fast they can travel. It is not instant, nor do we have the financial means to travel all the time. We are also limited such that we cannot be in multiple places at the same time either.
 
 
 ## Objective/Solution
@@ -79,22 +70,22 @@ Total Cost: 35 + 0 + 9.90 + 0 = 44.90
 
 # Mock Up
 
-	TODO: Add picture of materials
+TODO: Add picture of materials
 
 
 # Technologies
 
-	TODO: Write down each technology used or plan to use
+TODO: Write down each technology used or plan to use
 
 
 # Solution/Description
 
-	TODO: Write down each piece of the solution, i.e. break it down into smaller pieces
+TODO: Write down each piece of the solution, i.e. break it down into smaller pieces
 
 
 ## Who will do what?
 
-	I, Samuel Rodriguez, will be doing all of the work
+I, Samuel Rodriguez, will be doing all of the work
 
 
 ## When will it be done?
