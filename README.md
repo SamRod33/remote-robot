@@ -1,31 +1,16 @@
-<!-----
-NEW: Check the "Suppress top comment" option to remove this info from the output.
 
-Conversion time: 0.366 seconds.
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 1.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
 
+<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
 
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β29
-* Thu Jun 03 2021 10:52:30 GMT-0700 (PDT)
-* Source doc: UGV Robot
-
-WARNING:
-You have 6 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
-
------>
-
-# Unmanned Ground Vehicle (UGV)
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
 
 
-## Wirelessly controlled robot that provides live video footage
+<h2>  Unmanned Ground Vehicle (UGV)</h2>
+
+
+<p>Wirelessly controlled robot that provides live video footage
 
 Author: Samuel Rodriguez ([samuelrprofessional@gmail.com](mailto:samuelrprofessional@gmail.com))
 
@@ -35,18 +20,18 @@ Last Updated: 06/03/21
 
 Self-Link: [https://tinyurl.com/k3rpch2p](https://tinyurl.com/k3rpch2p)
 
+<h2>Background</h2>
 
-# Background
 
 Personally, I am at my university for most of the year, so I do not have the ability to traverse around my house to see my dogs, and I tend to get homesick sometimes.
 
+<h3>Problem</h3>
 
-## Problem
 
 Humans are limited in how fast they can travel. It is not instant, nor do we have the financial means to travel all the time. We are also limited such that we cannot be in multiple places at the same time either.
 
+<h3>Objective/Solution</h3>
 
-## Objective/Solution
 
 
 
@@ -55,85 +40,198 @@ Humans are limited in how fast they can travel. It is not instant, nor do we hav
 *   Control robot from a secure site
 *   Robot travels on the ground
 
-
-## Materials
-
+<h3>Materials</h3>
 
 
-*   Raspberry Pi 4 Model B : $35
+
+
+*   Raspberry Pi 4 Model B : $43
 *   Micro HDMI to HDMI cable : $0 (Already have)
 *   16BG Micro SD card (x3) : $9.90
 *   5V DC 3A power supply adapter with USB type C : $0 (Already have)
+*   4 Wheels and 4 motors : $14.99
+*   L298N Motor Drive Controller Board DC Dual H-Bridge Robot Stepper Motor Control and dupont cables : $ 6.99
 
-Total Cost: 35 + 0 + 9.90 + 0 = 44.90
+Total Cost: 43 + 0 + 9.90 + 0 + 14.99 + 6.99 = 74.88
 
-
-# Mock Up
-
-TODO: Add picture of materials
-
-
-# Technologies
-
-TODO: Write down each technology used or plan to use
+<h2>Mock Up</h2>
 
 
-# Solution/Description
+Website where user controls robot from and views live video
+
+
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+![alt_text](src/remote-robot-control-center.png "image_tooltip")
+
+
+<h2>Technologies</h2>
+
+
+<h5>Figma</h5>
+
+
+
+
+*   Design website mockup that will serve as the remote control for the UGV
+*   Provide assets from the mockup into the actual website
+
+<h5>Python</h5>
+
+
+
+
+*   Use GPIOZero module to control motors:
+
+[https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor](https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor)
+
+
+
+*   Create HTTP Server to handle requests from user to send to UGV and take video data from robot to user
+
+<h5>HTML</h5>
+
+
+
+
+*   Basic website design (refer to mockup) that will show controls and live video
+
+<h5>DC Motors</h5>
+
+
+
+
+*   Gives all 4 wheel drive mobility
+*   Activates each motor according to input from Raspberry Pi
+*   Level of voltage correlates with rpm
+*   One motor per wheel
+*   Two motors per motor controller
+
+<h5>Raspberry Pi</h5>
+
+
+
+
+*   Hub for robot
+*   Communicates with server
+    *   Receives input for how to control UGV
+    *   Sends live video output
+*   Sends output to motors to move UGV
+*   Receives input from camera to send live video
+
+<h5>Camera</h5>
+
+
+
+
+*   Connects to Raspberry Pi
+*   Sends video data to Raspberry Pi
+
+<h5>Electric Wire</h5>
+
+
+
+
+*   Connect two per motor
+
+<h5>L298N Motor Drive Controller</h5>
+
+
+
+
+*   Communicate between 2 motors and Pi
+*   Controls power delivered to the motors
+
+<h2>Solution/Description</h2>
+
 
 TODO: Write down each piece of the solution, i.e. break it down into smaller pieces
 
+<h3>Who will do what?</h3>
 
-## Who will do what?
 
 I, Samuel Rodriguez, will be doing all of the work
 
-
-## When will it be done?
-
-
-### Week 1
+<h3>When will it be done?</h3>
 
 
-### Week 2
-
-
-### Week 3
-
-
-### Week 4
-
-
-### Week 5
-
-
-### Week 6
-
-
-# Weekly Log
-
-
-### Week 1
+<h4>Week 1</h4>
 
 
 
-*   I bought Raspberry Pi and Micro SD cards
+
+*   Order all materials to practice with Raspberry Pi without constructing robot
+*   Create website mockup on Figma
+*   Finish design doc
+*   Create static web page following mockup
+
+<h4>Week 2</h4>
+
+
+
+
+*   Connect to Raspberry Pi to control via laptop’s monitor and keyboard
+*   Create local http-server with Python
+*   Connect motors to power source to test that they are running
+
+<h4>Week 3</h4>
+
+
+
+
+*   Configure motor drive controller to Pi and motors
+*   Send local signals to Pi to control motors via Pi
+*   Configure camera to Pi (might need camera module)
+
+<h4>Week 4</h4>
+
+
+
+
+*   Configure camera to Pi
+*   Create client for Pi to connect to http-server (with Python)
+*   Control Pi via server (ensure connection even on different networks)
+
+<h4>Week 5</h4>
+
+
+
+
+*   Build robot skeleton and mount all devices
+
+<h4>Week 6</h4>
+
+
+<h2>Weekly Log</h2>
+
+
+<h4>Week 1</h4>
+
+
+
+
+*   I bought Raspberry Pi, motors, wheels, and Micro SD cards
 *   Research how to setup Raspberry Pi via guidebook 
 *   Construct GitHub Repo
+*   Wrote some technologies in design doc
+*   Create website mockup
+
+<h4>Week 2</h4>
 
 
-### Week 2
+<h4>Week 3</h4>
 
 
-### Week 3
+<h4>Week 4</h4>
 
 
-### Week 4
+<h4>Week 5</h4>
 
 
-### Week 5
+<h4>Week 6</h4>
 
 
-### Week 6
+<h2>Conclusion</h2>
 
-
-# Conclusion
