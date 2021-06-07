@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+
+/* control center */
+#controls {
+  position: absolute;
+  top: 701px;
+  padding-left: 20%;
+  width: 1097px;
+  height: 261px;
+}
+
