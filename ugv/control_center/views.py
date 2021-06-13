@@ -6,22 +6,23 @@ from django.shortcuts import render
 # uncomment when running on Pi
 # GPIO.setmode(GPIO.BOARD)
 # set up GPIO outputs (where motor driver controller is connected)
-a = -1
-b = -1
-c = -1
-d = -1
 # pins on Pi that connect to motors
-# TODO: place diagram as comment detailing how motors were wired
-pins = [a, b, c, d]
+# Diagram POV: looking at wheels from top down
+# 18 --- 27
+#  | @@@ |
+#  | @@@ |
+#  | @@@ |
+# 15 --- 17
+pins = [18, 17, 27, 15]
 # directions that correspond to pin arrangement
 left_ = [False, True, True, False]
 right_ = [not v for v in left_]
 forward_ = [False, True, False, True]
 backward_ = [not v for v in forward_]
-# GPIO.setup(a, GPIO.OUT)
-# GPIO.setup(b, GPIO.OUT)
-# GPIO.setup(c, GPIO.OUT)
-# GPIO.setup(d, GPIO.OUT)
+# GPIO.setup(18, GPIO.OUT)
+# GPIO.setup(17, GPIO.OUT)
+# GPIO.setup(27, GPIO.OUT)
+# GPIO.setup(15, GPIO.OUT)
 
 
 def index(request):
