@@ -82,7 +82,7 @@ Website where user controls robot from and views live video
 </p>
 <p>
 
-<img src="media/remote-robot-control-center.png" alt="Mock Up" title="live-video-feed">
+<img src="/media/remote-robot-control-center.png" alt="Mock Up" title="live-video-feed">
 
 </p>
 <h2>Technologies</h2>
