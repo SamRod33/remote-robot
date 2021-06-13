@@ -1,193 +1,296 @@
 
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 0; ALERTS: 2.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
+
+<p style="color: red; font-weight: bold">Links to alert messages:</p><a href="#gdcalert1">alert1</a>
+<a href="#gdcalert2">alert2</a>
+
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
+
+
 <h2>  Unmanned Ground Vehicle (UGV)</h2>
 
 
 <p>Wirelessly controlled robot that provides live video footage
-
-Author: Samuel Rodriguez ([samuelrprofessional@gmail.com](mailto:samuelrprofessional@gmail.com))
-
+</p>
+<p>
+Author: Samuel Rodriguez (<a href="mailto:samuelrprofessional@gmail.com">samuelrprofessional@gmail.com</a>)
+</p>
+<p>
 Started: 06/01/21
-
+</p>
+<p>
 Last Updated: 06/03/21
-
-Self-Link: [https://tinyurl.com/k3rpch2p](https://tinyurl.com/k3rpch2p)
-
+</p>
+<p>
+Self-Link: <a href="https://tinyurl.com/k3rpch2p">https://tinyurl.com/k3rpch2p</a>
+</p>
 <h2>Background</h2>
 
 
+<p>
 Personally, I am at my university for most of the year, so I do not have the ability to traverse around my house to see my dogs, and I tend to get homesick sometimes.
-
+</p>
 <h3>Problem</h3>
 
 
+<p>
 Humans are limited in how fast they can travel. It is not instant, nor do we have the financial means to travel all the time. We are also limited such that we cannot be in multiple places at the same time either.
-
+</p>
 <h3>Objective/Solution</h3>
 
 
+<ul>
 
+<li>Build a wirelessly controlled robot from anywhere in the world
 
-*   Build a wirelessly controlled robot from anywhere in the world
-*   Install camera to get live video footage from robot
-*   Control robot from a secure site
-*   Robot travels on the ground
+<li>Install camera to get live video footage from robot
 
+<li>Control robot from a secure site
+
+<li>Robot travels on the ground
+</li>
+</ul>
 <h3>Materials</h3>
 
 
+<ul>
 
+<li>Raspberry Pi 4 Model B : $43
 
-*   Raspberry Pi 4 Model B : $43
-*   Micro HDMI to HDMI cable : $0 (Already have)
-*   16BG Micro SD card (x3) : $9.90
-*   5V DC 3A power supply adapter with USB type C : $0 (Already have)
-*   4 Wheels and 4 motors : $14.99
-*   L298N Motor Drive Controller Board DC Dual H-Bridge Robot Stepper Motor Control and dupont cables : $ 6.99
+<li>Micro HDMI to HDMI cable : $0 (Already have)
 
-Total Cost: 43 + 0 + 9.90 + 0 + 14.99 + 6.99 = 74.88
+<li>16BG Micro SD card (x3) : $9.90
 
+<li>5V DC 3A power supply adapter with USB type C : $0 (Already have)
+
+<li>4 Wheels and 4 motors : $14.99
+
+<li>L298N Motor Drive Controller Board DC Dual H-Bridge Robot Stepper Motor Control and dupont cables : $ 6.99
+
+<li>Female to female wiring: $5.99
+</li>
+</ul>
+<p>
+Total Cost: 43 + 0 + 9.90 + 0 + 14.99 + 6.99 + 5.99 = 80.87
+</p>
 <h2>Mock Up</h2>
 
 
+<p>
 Website where user controls robot from and views live video
+</p>
+<p>
 
-![alt_text](src/remote-robot-control-center.png "image_tooltip")
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
+<img src="images/image1.png" width="" alt="alt_text" title="image_tooltip">
+
+</p>
 <h2>Technologies</h2>
 
 
 <h5>Figma</h5>
 
 
+<ul>
 
+<li>Design website mockup that will serve as the remote control for the UGV
 
-*   Design website mockup that will serve as the remote control for the UGV
-*   Provide assets from the mockup into the actual website
-
+<li>Provide assets from the mockup into the actual website
+</li>
+</ul>
 <h5>Python</h5>
 
 
+<ul>
+
+<li>Use GPIOZero module to control motors:
+</li>
+</ul>
+<p>
+<a href="https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor">https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor</a>
+</p>
+<ul>
+
+<li>
+</li>
+</ul>
+<h5>Django</h5>
 
 
-*   Use GPIOZero module to control motors:
+<ul>
 
-[https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor](https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor)
+<li>Create Django development server to communicate between Pi and remote control device
+
+<li>Javascript listeners performs GET request when user presses specific keys that are mapped to various robot configurations (i.e. arrow keys to move)
+
+<li>Executes python script to handle GET and POST requests while simultaneously controlling Pi via GPIO output signals
+</li>
+</ul>
+<h5>Ngrok</h5>
 
 
+<ul>
 
-*   Create HTTP Server to handle requests from user to send to UGV and take video data from robot to user
+<li>Features a secure tunneling service to connect any device to Pi from anywhere in the world online
 
+<li>Implements SSH online to activate server on the Pi and control the robot all from a device like a laptop
+</li>
+</ul>
 <h5>HTML</h5>
 
 
+<ul>
 
-
-*   Basic website design (refer to mockup) that will show controls and live video
-
+<li>Basic website design (refer to mockup) that will show controls and live video
+</li>
+</ul>
 <h5>DC Motors</h5>
 
 
+<ul>
 
+<li>Gives all 4 wheel drive mobility
 
-*   Gives all 4 wheel drive mobility
-*   Activates each motor according to input from Raspberry Pi
-*   Level of voltage correlates with rpm
-*   One motor per wheel
-*   Two motors per motor controller
+<li>Activates each motor according to input from Raspberry Pi
 
+<li>Level of voltage correlates with rpm
+
+<li>One motor per wheel
+
+<li>Two motors per motor controller
+</li>
+</ul>
 <h5>Raspberry Pi</h5>
 
 
+<ul>
 
+<li>Hub for robot
 
-*   Hub for robot
-*   Communicates with server
-    *   Receives input for how to control UGV
-    *   Sends live video output
-*   Sends output to motors to move UGV
-*   Receives input from camera to send live video
+<li>Communicates with server 
+<ul>
+ 
+<li>Receives input for how to control UGV
+ 
+<li>Sends live video output
+</li> 
+</ul>
 
+<li>Sends output to motors to move UGV
+
+<li>Receives input from camera to send live video
+</li>
+</ul>
 <h5>Camera</h5>
 
 
+<ul>
+
+<li>Connects to Raspberry Pi
+
+<li>Sends video data to Raspberry Pi
+</li>
+</ul>
+<h5>Electric Wire Diagram for One TT Motor</h5>
 
 
-*   Connects to Raspberry Pi
-*   Sends video data to Raspberry Pi
+<p>
 
-<h5>Electric Wire</h5>
+    
+
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
 
 
+<img src="images/image2.png" width="" alt="alt_text" title="image_tooltip">
 
-
-*   Connect two per motor
-
+</p>
 <h5>L298N Motor Drive Controller</h5>
 
 
+<ul>
 
+<li>Communicate between 2 motors and Pi
 
-*   Communicate between 2 motors and Pi
-*   Controls power delivered to the motors
-
+<li>Controls voltage delivered to the motors to change motor’s RPM (essentially controlling speed of the robot)
+</li>
+</ul>
 <h2>Solution/Description</h2>
 
 
+<p>
 TODO: Write down each piece of the solution, i.e. break it down into smaller pieces
-
+</p>
 <h3>Who will do what?</h3>
 
 
+<p>
 I, Samuel Rodriguez, will be doing all of the work
-
+</p>
 <h3>When will it be done?</h3>
 
 
 <h4>Week 1</h4>
 
 
+<ul>
 
+<li>Order all materials to practice with Raspberry Pi without constructing robot
 
-*   Order all materials to practice with Raspberry Pi without constructing robot
-*   Create website mockup on Figma
-*   Finish design doc
-*   Create static web page following mockup
+<li>Create website mockup on Figma
 
+<li>Finish design doc
+
+<li>Create static web page following mockup
+</li>
+</ul>
 <h4>Week 2</h4>
 
 
+<ul>
 
+<li>Connect to Raspberry Pi to control via laptop’s monitor and keyboard
 
-*   Connect to Raspberry Pi to control via laptop’s monitor and keyboard
-*   Create local http-server with Python
-*   Connect motors to power source to test that they are running
+<li>Create local http-server with Python
 
+<li>Connect motors to power source to test that they are running
+</li>
+</ul>
 <h4>Week 3</h4>
 
 
+<ul>
 
+<li>Configure motor drive controller to Pi and motors
 
-*   Configure motor drive controller to Pi and motors
-*   Send local signals to Pi to control motors via Pi
-*   Configure camera to Pi (might need camera module)
+<li>Send local signals to Pi to control motors via Pi
 
+<li>Configure camera to Pi (might need camera module)
+</li>
+</ul>
 <h4>Week 4</h4>
 
 
+<ul>
 
+<li>Configure camera to Pi
 
-*   Configure camera to Pi
-*   Create client for Pi to connect to http-server (with Python)
-*   Control Pi via server (ensure connection even on different networks)
+<li>Create client for Pi to connect to http-server (with Python)
 
+<li>Control Pi via server (ensure connection even on different networks)
+</li>
+</ul>
 <h4>Week 5</h4>
 
 
+<ul>
 
-
-*   Build robot skeleton and mount all devices
-
+<li>Build robot skeleton and mount all devices
+</li>
+</ul>
 <h4>Week 6</h4>
 
 
@@ -197,17 +300,42 @@ I, Samuel Rodriguez, will be doing all of the work
 <h4>Week 1</h4>
 
 
+<ul>
 
+<li>I bought Raspberry Pi, motors, wheels, motor driver controller, few wires, and Micro SD cards
 
-*   I bought Raspberry Pi, motors, wheels, and Micro SD cards
-*   Research how to setup Raspberry Pi via guidebook 
-*   Construct GitHub Repo
-*   Wrote some technologies in design doc
-*   Create website mockup
+<li>Research how to setup Raspberry Pi via guidebook 
 
+<li>Construct GitHub Repo
+
+<li>Wrote some technologies in design doc
+
+<li>Create website mockup
+
+<li>Implement website (control center) skeleton
+</li>
+</ul>
 <h4>Week 2</h4>
 
 
+<ul>
+
+<li>Set Up and Connected Raspberry Pi to VNC and SSH 
+<ul>
+ 
+<li>Enables Pi to be controlled from laptop
+</li> 
+</ul>
+
+<li>Create django project in development mode and integrated control center site
+
+<li>Integrated GPIO control in django development project
+
+<li>Connected motors to the power source via reconfigured USB cable and they worked!
+
+<li>Purchased female to female wiring
+</li>
+</ul>
 <h4>Week 3</h4>
 
 

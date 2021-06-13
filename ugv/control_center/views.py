@@ -68,6 +68,7 @@ def right(request):
     Pi moves right and renders index.html page
     """
     # go(dict(zip(pins, right_)))
+    print("Bruh")
     return index(request)
 
 
