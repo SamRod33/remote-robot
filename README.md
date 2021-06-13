@@ -82,11 +82,7 @@ Website where user controls robot from and views live video
 </p>
 <p>
 
-
-<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image1.png" width="" alt="alt_text" title="image_tooltip">
+<img src="media/remote-robot-control-center.png" alt="Mock Up" title="live-video-feed">
 
 </p>
 <h2>Technologies</h2>
@@ -113,11 +109,6 @@ Website where user controls robot from and views live video
 <p>
 <a href="https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor">https://gpiozero.readthedocs.io/en/stable/api_output.html?highlight=motor#motor</a>
 </p>
-<ul>
-
-<li>
-</li>
-</ul>
 <h5>Django</h5>
 
 
@@ -197,15 +188,9 @@ Website where user controls robot from and views live video
 </ul>
 <h5>Electric Wire Diagram for One TT Motor</h5>
 
-
 <p>
 
-    
-
-<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
-
-
-<img src="images/image2.png" width="" alt="alt_text" title="image_tooltip">
+<img src="media/circuit-diagram.jpg" alt="circuit-diagram" title="wiring">
 
 </p>
 <h5>L298N Motor Drive Controller</h5>
