@@ -4,10 +4,21 @@ from django.shortcuts import render
 # import RPi.GPIO as GPIO # uncomment when running on Pi
 
 # uncomment when running on Pi
-# GPIO.setmode(GPIO.BOARD)
+# GPIO.setmode(GPIO.BOARD) # NOTE: this referes to physical numering of board
+# should use instead GPIO.setmode(GPIO.BCM) # TODO: get it working for GPIO.BOARD
+# I am currently using Pi model 4 numbering
+# Basically,
+#  BOARD numbering system. This refers to the pin numbers on the P1 header of
+# the Raspberry Pi board. The advantage of using this numbering system is that
+# your hardware will always work, regardless of the board revision of the RPi.
+# You will not need to rewire your connector or change your code.
+# The second numbering system is the BCM numbers. This is a lower level way of
+# working - it refers to the channel numbers on the Broadcom SOC. You have to
+# always work with a diagram of which channel number goes to which pin on the
+# RPi board. Your script could break between revisions of Raspberry Pi boards.
 # set up GPIO outputs (where motor driver controller is connected)
 # pins on Pi that connect to motors
-# Diagram POV: looking at wheels from top down
+# Diagram POV: looking at wheels from top down # TODO: revise plz
 # 18 --- 27
 #  | @@@ |
 #  | @@@ |
@@ -15,7 +26,7 @@ from django.shortcuts import render
 # 15 --- 17
 pins = [18, 17, 27, 15]
 # directions that correspond to pin arrangement
-left_ = [False, True, True, False]
+left_ = [True, True, False, False]
 right_ = [not v for v in left_]
 forward_ = [False, True, False, True]
 backward_ = [not v for v in forward_]
@@ -69,7 +80,6 @@ def right(request):
     Pi moves right and renders index.html page
     """
     # go(dict(zip(pins, right_)))
-    print("Bruh")
     return index(request)
 
 
