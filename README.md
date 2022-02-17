@@ -312,6 +312,14 @@ I, Samuel Rodriguez, will be doing all of the work
 </li>
 </ul>
 <h4>Week 3</h4>
+<ul>
+<li> Cut out bottom chasis from clipboard
+<li> Attached motors, Pi, Pi power source, motor drive controller, and motor driver controller
+power source to chasis
+<li> Performed initial tests controlling robot prototype from a local
+<li> Necessary improvements: distribute weight evenly on robot as power sources
+are the main source of weight that is fastened to only one side of the robot.
+</ul>
 
 
 <h4>Week 4</h4>
