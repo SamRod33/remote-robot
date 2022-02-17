@@ -255,7 +255,7 @@ I, Samuel Rodriguez, will be doing all of the work
 
 <li>Create client for Pi to connect to http-server (with Python)
 
-<li>Control Pi via server (ensure connection even on different networks)
+<li>Control Pi via server (ensure connection even on different networks).
 </li>
 </ul>
 <h4>Week 5</h4>

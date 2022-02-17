@@ -11,3 +11,17 @@ body {
   height: 261px;
 }
 
+#camera {
+  position: absolute;
+  left: 18%;
+  top: 10%;
+  width: 1098px;
+  height: 593px;
+	background-color: black;
+}
+#videoElement {
+  width: 1098px;
+  height: 593px;
+	background-color: gray;
+}
+
