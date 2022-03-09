@@ -1,7 +1,7 @@
 <h2>  Unmanned Ground Vehicle (UGV)</h2>
 
 
-<p>Wirelessly controlled robot that provides live video footage
+<p>Wired controlled robot that provides live video footage
 </p>
 <p>
 Author: Samuel Rodriguez (<a href="mailto:samuelrprofessional@gmail.com">samuelrprofessional@gmail.com</a>)
